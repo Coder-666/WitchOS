@@ -1,0 +1,17 @@
+C:\Users\Marco\Desktop\Marco Quinten\WitchOS\bin\Debug\WitchOS.dll
+C:\Users\Marco\Desktop\Marco Quinten\WitchOS\bin\Debug\WitchOS.pdb
+C:\Users\Marco\Desktop\Marco Quinten\WitchOS\bin\Debug\Cosmos.Core.dll
+C:\Users\Marco\Desktop\Marco Quinten\WitchOS\bin\Debug\Cosmos.Debug.Kernel.dll
+C:\Users\Marco\Desktop\Marco Quinten\WitchOS\bin\Debug\Cosmos.Hardware.dll
+C:\Users\Marco\Desktop\Marco Quinten\WitchOS\bin\Debug\Cosmos.System.dll
+C:\Users\Marco\Desktop\Marco Quinten\WitchOS\bin\Debug\Cosmos.Common.Extensions.dll
+C:\Users\Marco\Desktop\Marco Quinten\WitchOS\bin\Debug\Cosmos.Core.pdb
+C:\Users\Marco\Desktop\Marco Quinten\WitchOS\bin\Debug\Cosmos.Hardware.pdb
+C:\Users\Marco\Desktop\Marco Quinten\WitchOS\bin\Debug\Cosmos.System.pdb
+C:\Users\Marco\Desktop\Marco Quinten\WitchOS\bin\Debug\Cosmos.Debug.Kernel.pdb
+C:\Users\Marco\Desktop\Marco Quinten\WitchOS\bin\Debug\Cosmos.Common.Extensions.pdb
+C:\Users\Marco\Desktop\Marco Quinten\WitchOS\obj\Debug\WitchOS.csprojResolveAssemblyReference.cache
+C:\Users\Marco\Desktop\Marco Quinten\WitchOS\obj\Debug\WitchOS.dll
+C:\Users\Marco\Desktop\Marco Quinten\WitchOS\obj\Debug\WitchOS.pdb
+C:\Users\Marco\Desktop\Marco Quinten\WitchOS\bin\Debug\Cosmos.IL2CPU.Plugs.dll
+C:\Users\Marco\Desktop\Marco Quinten\WitchOS\bin\Debug\Cosmos.IL2CPU.Plugs.pdb
