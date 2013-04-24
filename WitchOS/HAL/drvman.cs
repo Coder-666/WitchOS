@@ -8,6 +8,7 @@ namespace WitchOS.HAL
         public static FATFS fs;
         public static SCREENBUFFER screenbuffer;
         public static ACPI acpi;
+        public static PCSpeaker pcspeaker;
         public enum verbosity : byte { none = 0, basic = 1, max = 2 };
         public static void LoadDrivers()
         {
@@ -19,6 +20,9 @@ namespace WitchOS.HAL
 
             // Screen buffers
             screenbuffer = new SCREENBUFFER();
+
+            // PCSPeaker
+            pcspeaker = new PCSpeaker();
         }
     }
 }

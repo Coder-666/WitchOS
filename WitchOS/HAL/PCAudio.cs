@@ -1,24 +1,27 @@
 ﻿using System;
 using WitchOS;
 
-namespace dewitcher.Audio
+namespace WitchOS.HAL
 {
     public class PCSpeaker
     {
-        public static void sound_on()
+        public PCSpeaker()
+        {
+        }
+        public void sound_on()
         {
             Kernel.outb(0x61, (byte)(Kernel.inb(0x61) | 3));
         }
-        public static void sound_off()
+        public void sound_off()
         {
             Kernel.outb(0x61, (byte)(Kernel.inb(0x61) & ~3));
         }
-        public static void Beep(uint frequency)
+        public void Beep(uint frequency)
         {
             // PIT.Beep(frequency);
             sound_on();
         }
-        public static void Beep(uint frequency, uint milliseconds)
+        public void Beep(uint frequency, uint milliseconds)
         {
             Beep(frequency);
             // PIT.SleepMilliseconds(milliseconds);
