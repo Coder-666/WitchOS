@@ -7,7 +7,7 @@ using WitchOS.Core;
 
 namespace WitchOS.HAL
 {
-    public class FATFS
+    public class FATFS : Driver
     {
         private AtaPio xATA = null;
         private Partition xPartition = null;
@@ -18,13 +18,15 @@ namespace WitchOS.HAL
 
         public FATFS(drvman.verbosity verbositylevel)
         {
+            base.name = "fatfs";
+            base.info = "FAT Filesystem Driver";
             this.vlevel = (byte)verbositylevel;
             Core.Out.printf("Loading filesystem driver...\n");
             try
             {
                 this.Setup();
             }
-            catch (Exception ex)
+            catch
             {
                 //dewitcher.Core.Bluescreen.Init(ex, true);
                 if ((byte)this.vlevel > 0) Core.Out.printf("ERROR: Could not load the FATFS driver\n");

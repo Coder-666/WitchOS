@@ -7,7 +7,7 @@ namespace WitchOS.Applications
     // change key layout
     public class keys : Application
     {
-        public keys() { this.call = "keys"; this.usage = "keys qwerty|qwertz|azerty"; }
+        public keys() { this.call = "keys"; this.usage = "keys <de|fr|<en|us>"; }
         public override void Run(string[] args)
         {
             HAL.drvman.screenbuffer.Push();
@@ -21,9 +21,9 @@ namespace WitchOS.Applications
             {
                 string arg = args[0].ToLower();
                 bool success = true;
-                if (arg == "qwertz") Core.Keylayout.QWERTZ();
-                else if (arg == "qwerty") Core.Keylayout.QWERTY();
-                else if (arg == "azerty") Core.Keylayout.AZERTY();
+                if (arg == "de" || arg == "qwertz") Core.Keylayout.QWERTZ();
+                else if (arg == "en" || arg == "us" || arg == "qwerty") Core.Keylayout.QWERTY();
+                else if (arg == "fr" || arg == "azerty") Core.Keylayout.AZERTY();
                 else success = false;
                 if (success) Out.printf("Changed keylayout to %s\n", arg);
                 else

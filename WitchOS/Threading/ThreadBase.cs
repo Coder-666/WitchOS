@@ -11,20 +11,29 @@ namespace WitchOS.Threading
         public delegate void ThreadMethod();
         public ThreadMethod action = null;
         public string name;
-        public void Start()
+        public void HandleSignal(string signal)
+        {
+            switch (signal)
+            {
+                case "START":
+                    Start();
+                    break;
+            }
+        }
+        private void Start()
         {
             action.Invoke();
         }
-        public void Pause()
+        private void Pause()
         {
         }
-        public void Resume()
+        private void Resume()
         {
         }
-        public void Stop()
+        private void Stop()
         {
         }
-        public void Kill()
+        private void Kill()
         {
         }
     }

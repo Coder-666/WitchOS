@@ -22,7 +22,6 @@ namespace WitchOS.Core
             string[] args = full.Substring(command.Length + 1).Split(' ');
             for (int i = 0; i < args.Length; i++) args[i] = args[i].Trim();
             bool ok = Applications.appman.Run(command, args);
-            if (!ok) Out.printf("The application \"%s\" does not exist :/\n", command);
         }
     }
 }

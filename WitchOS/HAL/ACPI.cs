@@ -6,7 +6,7 @@ using WitchOS.Services;
 
 namespace WitchOS.HAL
 {
-    public unsafe class ACPI
+    public unsafe class ACPI : Driver
     {
         internal int* SMI_CMD;
         internal byte ACPI_ENABLE;
@@ -20,6 +20,8 @@ namespace WitchOS.HAL
         internal byte PM1_CNT_LEN;
         public ACPI()
         {
+            base.name = "acpi";
+            base.info = "Advanced Configuration and Power Interface Driver";
             Out.printf("Loading ACPI driver...\n");
             if (!this.Init()) Services.srvman.syslog.Write(new SyslogEntry(SyslogEntry.Type.Driver,
                 "ACPI", "There was a problem while initializing ACPI"));

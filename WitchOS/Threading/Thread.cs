@@ -8,7 +8,7 @@ namespace WitchOS.Threading
         public Thread(string name, ThreadMethod trdinvoke)
         {
             this.name = name;
-            Global.Register(this);
+            trdman.Register(this);
             this.action = trdinvoke;
         }
     }

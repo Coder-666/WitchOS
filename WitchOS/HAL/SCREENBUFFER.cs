@@ -4,7 +4,7 @@ using WitchOS.Core;
 
 namespace WitchOS.HAL
 {
-    public unsafe class SCREENBUFFER
+    public unsafe class SCREENBUFFER : Driver
     {
         public class Buffer
         {
@@ -15,6 +15,8 @@ namespace WitchOS.HAL
         public List<Buffer> buffers;
         public SCREENBUFFER()
         {
+            base.name = "screenbuffer";
+            base.info = "VideoRam Buffer Driver";
             Out.printf("Loading screenbuffer driver...\n");
             Address = (byte*)0xB8000;
             buffers = new List<Buffer>();

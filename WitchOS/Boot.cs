@@ -19,15 +19,13 @@ namespace WitchOS
 
             // Prepare threading
             Out.printf("Preparing threading...\n");
-            Threading.Global.PrepareThreading();
+            Threading.trdman.PrepareThreading();
 
             // Initialize applications
             Out.printf("Initializing applications...\n");
-            Applications.appman.Init(0);
+            Applications.appman.Init(1);
 
             Out.printf("WitchOS has loaded all the drivers and services.\n");
-            Out.printf("-- Press any key to run the main kernel --\n");
-            Console.ReadKey();
             Console.Clear();
         }
 

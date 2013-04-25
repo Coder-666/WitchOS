@@ -53,7 +53,9 @@
     <Compile Include="Applications\appman.cs" />
     <Compile Include="Applications\keys.cs" />
     <Compile Include="Applications\syslog.cs" />
+    <Compile Include="Applications\system.cs" />
     <Compile Include="Applications\witchedit.cs" />
+    <Compile Include="HAL\Driver.cs" />
     <Compile Include="HAL\INTs.cs" />
     <Compile Include="Core\Keylayout.cs" />
     <Compile Include="Core\MD5.cs" />
@@ -77,7 +79,7 @@
     <Compile Include="Kernel API\Kernel_Memory.cs" />
     <Compile Include="Services\Service.cs" />
     <Compile Include="Services\srvman.cs" />
-    <Compile Include="Threading\Global.cs" />
+    <Compile Include="Threading\trdman.cs" />
     <Compile Include="Threading\Thread.cs" />
     <Compile Include="Threading\ThreadBase.cs" />
     <Compile Include="Threading\ThreadSignal.cs" />

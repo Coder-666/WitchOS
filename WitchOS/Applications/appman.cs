@@ -15,6 +15,7 @@ namespace WitchOS.Applications
             vlevel = verbosity;
             Register(new keys());
             Register(new syslog());
+            Register(new system());
         }
         public static void Register(Application application)
         {
@@ -50,6 +51,13 @@ namespace WitchOS.Applications
                 }
             }
             return false;
+        }
+        //
+        // IMPLEMENT!!!
+        //
+        public static void HandleRequest(string[] args)
+        {
+            if (args.Length > 0) Out.printf("The command %s is currently not supported", args[0]);
         }
     }
 }
