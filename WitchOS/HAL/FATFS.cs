@@ -21,7 +21,7 @@ namespace WitchOS.HAL
             base.name = "fatfs";
             base.info = "FAT Filesystem Driver";
             this.vlevel = (byte)verbositylevel;
-            Core.Out.printf("Loading filesystem driver...\n");
+            Core.Out.printf("Loading FAT filesystem driver...\n");
             try
             {
                 this.Setup();

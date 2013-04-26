@@ -17,7 +17,7 @@ namespace WitchOS.Core
         public static void ParseInput()
         {
             string full = Console.ReadLine().Trim();
-            if (full[0] == '#' || full == "" || full == "\0" || full == "\x00") return;
+            if (full[0] == '#' || full == "") return;
             string command = full.Split(' ')[0].Trim();
             string[] args = full.Substring(command.Length + 1).Split(' ');
             for (int i = 0; i < args.Length; i++) args[i] = args[i].Trim();

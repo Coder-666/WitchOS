@@ -6,7 +6,8 @@ namespace WitchOS.HAL
 {
     public static class drvman
     {
-        public static FATFS fs;
+        public static FATFS fatfs;
+        public static WitchFS witchfs;
         public static SCREENBUFFER screenbuffer;
         public static ACPI acpi;
         public static PCSpeaker pcspeaker;
@@ -21,8 +22,11 @@ namespace WitchOS.HAL
             registered.Add(acpi);
 
             // Filesystem
-            fs = new FATFS(verbosity.max);
-            registered.Add(fs);
+            fatfs = new FATFS(verbosity.max);
+            registered.Add(fatfs);
+            witchfs = new WitchFS();
+            witchfs.DetectHarddrives();
+            registered.Add(witchfs);
 
             // Screen buffers
             screenbuffer = new SCREENBUFFER();

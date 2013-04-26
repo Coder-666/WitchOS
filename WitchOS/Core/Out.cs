@@ -22,7 +22,7 @@ namespace WitchOS.Core
         private static List<int> replacepositions = new List<int>();
         private static List<replacetype> replacetypes = new List<replacetype>();
         private static string[] replaceparts;
-        public static void printf(string str, params object[] args)
+        public static string formatf(string str, params object[] args)
         {
             argreplaces = 0;
             replacepositions.Clear();
@@ -67,8 +67,7 @@ namespace WitchOS.Core
             }
             if (args.Length != argreplaces)
             {
-                printf("Error: You defined %i arguments, but there are %i arguments\n", argreplaces, args.Length);
-                return;
+                return "ERROR: invalid arguments for formatf\n";
             }
 
             replaceparts = new string[replacepositions.Count];
@@ -119,7 +118,11 @@ namespace WitchOS.Core
                 count++;
             }
 
-            Console.Write(str);
+            return str;
+        }
+        public static void printf(string str, params object[] args)
+        {
+            Console.Write(formatf(str, args));
         }
     }
 }

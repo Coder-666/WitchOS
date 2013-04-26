@@ -54,11 +54,12 @@
     <Compile Include="Applications\keys.cs" />
     <Compile Include="Applications\syslog.cs" />
     <Compile Include="Applications\system.cs" />
-    <Compile Include="Applications\witchedit.cs" />
     <Compile Include="HAL\Driver.cs" />
+    <Compile Include="HAL\HDDMountPoint.cs" />
     <Compile Include="HAL\INTs.cs" />
     <Compile Include="Core\Keylayout.cs" />
     <Compile Include="Core\MD5.cs" />
+    <Compile Include="HAL\WitchFS.cs" />
     <Compile Include="NotCosmosKernel.cs" />
     <Compile Include="Services\Syslog.cs" />
     <Compile Include="Services\SyslogEntry.cs" />

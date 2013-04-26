@@ -8,8 +8,6 @@ namespace WitchOS.Applications
         public syslog() { this.call = "syslog"; this.usage = "syslog view all"; }
         public override void Run(string[] args)
         {
-            HAL.drvman.screenbuffer.Push();
-            Console.Clear();
             if (args.Length == 1)
             {
                 Out.printf("ERROR: syslog needs two parameters\nUsage: %s\n", this.usage);
@@ -26,10 +24,6 @@ namespace WitchOS.Applications
                 }
                 else Out.printf("ERROR: The first argument must be \"view\"\nUsage: %s\n", this.usage);
             }
-            Out.printf("--- Press any key to exit ---\n");
-            Console.ReadKey();
-            Console.Clear();
-            HAL.drvman.screenbuffer.Pop();
         }
     }
 }

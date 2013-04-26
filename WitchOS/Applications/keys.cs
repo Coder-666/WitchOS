@@ -10,8 +10,6 @@ namespace WitchOS.Applications
         public keys() { this.call = "keys"; this.usage = "keys <de|fr|<en|us>"; }
         public override void Run(string[] args)
         {
-            HAL.drvman.screenbuffer.Push();
-            Console.Clear();
             if (args.Length == 0)
             {
                 Out.printf("ERROR: keys needs one parameter\nUsage: %s\n", this.usage);
@@ -26,20 +24,12 @@ namespace WitchOS.Applications
                 else if (arg == "fr" || arg == "azerty") Core.Keylayout.AZERTY();
                 else success = false;
                 if (success) Out.printf("Changed keylayout to %s\n", arg);
-                else
-                {
-                    Out.printf("ERROR: invalid parameter \"%s\"\nUsage: %s\n", arg, this.usage);
-                }
-                Out.printf("-- Press any key to exit --\n");
+                else Out.printf("ERROR: invalid parameter \"%s\"\nUsage: %s\n", arg, this.usage);
             }
             else if (args.Length > 1)
             {
                 Out.printf("ERROR: Too much parameters for keys\nUsage: %s\n", this.usage);
-                Out.printf("-- Press any key to exit --\n");
             }
-            Console.ReadKey();
-            Console.Clear();
-            HAL.drvman.screenbuffer.Pop();
         }
     }
 }

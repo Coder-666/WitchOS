@@ -5,6 +5,7 @@ namespace WitchOS
 {
     public class Boot : Cosmos.System.Kernel
     {
+        static bool debug = true;
         protected override void BeforeRun()
         {
             Out.printf("WitchOS v%d%s startup process\n", Kernel.Version, Kernel.VersionExt);
@@ -23,9 +24,10 @@ namespace WitchOS
 
             // Initialize applications
             Out.printf("Initializing applications...\n");
-            Applications.appman.Init(1);
+            Applications.appman.Init(0);
 
             Out.printf("WitchOS has loaded all the drivers and services.\n");
+            if (debug) { Out.printf("DEBUGMODE: PRESS A KEY TO CONTINUE\n"); Console.ReadKey(); }
             Console.Clear();
         }
 
